@@ -57,6 +57,11 @@ public class UserEntity implements Serializable {
     //@ToStringExclude
     @Column(name = "PASSWORD")
     private String password;
+    
+    @Column(name = "COUNTRY")
+    @NotNull
+    @Size(max = 200)
+    private String country;
 
     @Column(name = "CONTACT_NUMBER")
     @NotNull
@@ -144,7 +149,15 @@ public class UserEntity implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+     public String getCountry() {
+        return country;
+    }
 
+    public void setCountry(String country) {
+        this.country = country;
+    }    
+    
     public String getContactNumber() {
         return contactNumber;
     }
